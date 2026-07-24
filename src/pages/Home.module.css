@@ -1,0 +1,20 @@
+.overview {
+  padding-block: var(--space-8);
+}
+
+.overviewAlt {
+  background: var(--color-slate-100);
+}
+
+.overviewHeading {
+  font-size: var(--font-size-2xl);
+  max-width: 32ch;
+  margin-bottom: var(--space-4);
+}
+
+.overviewIntro {
+  color: var(--color-slate-600);
+  font-size: var(--font-size-lg);
+  max-width: 68ch;
+  margin-bottom: var(--space-5);
+}

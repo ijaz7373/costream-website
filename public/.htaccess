@@ -1,0 +1,15 @@
+# Serve the SPA's index.html for any deep link under /myproject/
+# (e.g. /myproject/technology/scada) instead of a 404, since routing
+# happens client-side in React Router.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /myproject/
+
+  # Let real files and directories (JS, CSS, images, etc.) pass through as-is
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else falls back to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
