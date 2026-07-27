@@ -1,5 +1,6 @@
 import BulletList from "./BulletList";
 import ComingSoonBadge from "./ComingSoonBadge";
+import { FeatureIcon } from "./icons";
 import styles from "./FeatureBlock.module.css";
 
 export default function FeatureBlock({
@@ -20,13 +21,17 @@ export default function FeatureBlock({
   const subheading = eyebrow ? tagline : null;
 
   return (
-    <div className={styles.block} id={id}>
+    <div className={styles.card} id={id}>
+      <div className={styles.iconBadge}>
+        <FeatureIcon label={heading} className={styles.icon} />
+      </div>
       {heading && (
         <h3 className={styles.heading}>
           {heading}
           {comingSoon && <ComingSoonBadge />}
         </h3>
       )}
+      <span className={styles.underline} aria-hidden="true" />
       {subheading && <p className={styles.subheading}>{subheading}</p>}
       {paragraphs.map((paragraph) => (
         <p className={styles.copy} key={paragraph.slice(0, 40)}>

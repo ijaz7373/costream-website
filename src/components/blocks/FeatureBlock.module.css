@@ -1,14 +1,36 @@
-.block {
-  padding-block: var(--space-6);
-  border-bottom: 1px solid var(--color-slate-200);
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   scroll-margin-top: 96px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.block:last-child {
-  border-bottom: none;
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.iconBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-2);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-blue-600);
 }
 
 .heading {
@@ -16,6 +38,15 @@
   align-items: center;
   gap: var(--space-3);
   font-size: var(--font-size-xl);
+}
+
+.underline {
+  display: block;
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-blue-600);
+  margin-top: calc(var(--space-1) * -1);
 }
 
 .subheading {
@@ -27,7 +58,6 @@
 
 .copy {
   color: var(--color-slate-600);
-  max-width: 72ch;
   font-size: var(--font-size-base);
 }
 

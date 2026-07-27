@@ -20,6 +20,7 @@ export default function PageHero({
         <div className={styles.copy}>
           {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
           <h1 className={styles.headline}>{headline}</h1>
+          <span className={styles.underline} aria-hidden="true" />
           {subhead && <p className={styles.subhead}>{subhead}</p>}
           {paragraphs.map((paragraph) => (
             <p className={styles.intro} key={paragraph.slice(0, 40)}>
@@ -33,8 +34,11 @@ export default function PageHero({
           )}
         </div>
         {hasImage && (
-          <div className={styles.imageWrap}>
-            <img src={image.src} alt={image.alt || ""} className={styles.image} />
+          <div className={styles.imageColumn}>
+            <span className={styles.blob} aria-hidden="true" />
+            <div className={styles.imageWrap}>
+              <img src={image.src} alt={image.alt || ""} className={styles.image} />
+            </div>
           </div>
         )}
       </div>

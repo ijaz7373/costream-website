@@ -30,6 +30,15 @@
   white-space: pre-line;
 }
 
+.underline {
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-blue-600);
+  margin-top: var(--space-3);
+}
+
 .subhead {
   margin-top: var(--space-4);
   font-size: var(--font-size-lg);
@@ -49,7 +58,26 @@
   margin-top: var(--space-6);
 }
 
+.imageColumn {
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  inset: -10% -12%;
+  background: radial-gradient(
+    ellipse at center,
+    var(--color-blue-600) 0%,
+    var(--color-teal-500) 100%
+  );
+  opacity: 0.12;
+  border-radius: 44% 56% 58% 42% / 48% 44% 56% 52%;
+  z-index: 0;
+}
+
 .imageWrap {
+  position: relative;
+  z-index: 1;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -69,6 +97,10 @@
 .center .headline,
 .center .subhead,
 .center .intro {
+  margin-inline: auto;
+}
+
+.center .underline {
   margin-inline: auto;
 }
 

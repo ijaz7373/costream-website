@@ -10,10 +10,9 @@
 }
 
 .block {
-  padding: var(--space-5);
+  padding: var(--space-6);
   background: var(--color-slate-100);
-  border-radius: var(--radius-md);
-  border-left: 3px solid var(--color-blue-600);
+  border-radius: var(--radius-lg);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -22,10 +21,36 @@
   box-shadow: var(--shadow-sm);
 }
 
+.iconBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-blue-600);
+}
+
+.underline {
+  display: block;
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-blue-600);
+  margin-bottom: var(--space-3);
+}
+
 .blockHeading {
   font-size: var(--font-size-lg);
   margin-bottom: var(--space-2);
-  color: var(--color-teal-600);
+  color: var(--color-navy-900);
 }
 
 .blockBody {
